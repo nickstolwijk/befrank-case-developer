@@ -87,18 +87,15 @@ Gegeven:
 Wanneer een gewenste pensioenleeftijd van 65 jaar wordt ingevuld  
 Dan levert dit een verwachte waarde op pensioendatum van 125.498,08 euro
 
-
 ### Aan de slag!
-Gebruik in het uitwerken van de case de volgende technieken:
-• Minimaal Java 11
-• Spring Boot
-• Angular
-• JPA
+Gebruik in het uitwerken van de case de volgende technieken:  
+• Minimaal Java 11  
+• Spring Boot  
+• Angular  
+• JPA  
 • JUnit, Mockito
 
-
-
-Heb je het afgerond?
+#### Heb je het afgerond?
 Stuur dan de broncode en een korte beschrijving van je oplossing met een paar screenshots van de werkende
 applicatie op. BeFrank zal de oplossing beoordelen en in je tweede gesprek kan je de gemaakte keuzes verder toelichten.
 
