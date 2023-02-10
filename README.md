@@ -6,8 +6,6 @@ De opdracht zal ongeveer 4 uur in beslag nemen en lijkt enigszins op een hackath
 Mocht je vast komen te zitten of merken dat je teveel tijd aan een bepaald onderdeel besteedt, probeer dan de simpelste oplossing die wel werkt te gebruiken. 
 Zoek contact als je er echt niet uit komt. Het is niet de bedoeling om een productie-ready applicatie te maken.
 
-De opdracht lever je in door de git repository met jouw oplossing op Github (of een andere service) aan ons beschikbaar te stellen.
-
 ### De opdracht :page_facing_up:
 Je levert een front-end op voor een deelnemer bij BeFrank. Hierop is de verwachte waarde van de pensioenpot op de geplande pensioendatum te zien. 
 De data voor dit front-end komt uit een java applicatie die hiervoor gegevens zal lezen uit een onderliggende database. 
@@ -98,7 +96,6 @@ Gebruik in het uitwerken van de case de volgende technieken:
 • JUnit, Mockito
 
 #### Heb je het afgerond?
-Stuur dan de broncode en een korte beschrijving van je oplossing met een paar screenshots van de werkende
-applicatie op. BeFrank zal de oplossing beoordelen en in je tweede gesprek kan je de gemaakte keuzes verder toelichten.
+Stuur een link naar de git repository op Github (of een andere service) naar ons op. Voeg een korte beschrijving van je oplossing met een paar screenshots van de werkende applicatie toe. BeFrank zal de oplossing beoordelen en in je tweede gesprek kan je de gemaakte keuzes verder toelichten.
 
 **:grey_question: Mocht je vragen hebben, schroom niet om contact op te nemen!**
