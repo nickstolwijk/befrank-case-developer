@@ -21,12 +21,12 @@ public class CaseService {
     private final DeelnemerRepository deelnemerRepository;
     private final BigDecimal verwachtRendement = BigDecimal.valueOf( 3L );
 
-    public BigDecimal calculate( final Long deelnemerId ) throws DeelnemerNotFound, PensioenRekeningNotFound {
+    public BigDecimal calculate( final Long deelnemerId, int verwachtePensioenLeeftijd ) throws DeelnemerNotFound, PensioenRekeningNotFound {
         var maybeDeelnemer = deelnemerRepository.findById(deelnemerId);
         return maybeDeelnemer.map( deelnemer -> {
             var maybePensioenRekening = pensioenRekeningRepository.retrieve(deelnemer.getPensioenRekeningNummer());
 
-            return maybePensioenRekening.map( calculateCase( deelnemer ) )
+            return maybePensioenRekening.map( calculateCase( deelnemer, verwachtePensioenLeeftijd ) )
                     .orElseThrow(PensioenRekeningNotFound::new);
             }
         )
@@ -35,11 +35,11 @@ public class CaseService {
 
     }
 
-    private Function<PensioenRekening, BigDecimal> calculateCase( Deelnemer deelnemer )
+    private Function<PensioenRekening, BigDecimal> calculateCase( Deelnemer deelnemer, int verwachtePensioenLeeftijd )
     {
         return pensioenRekening -> {
             var caseCalculator = new CaseCalculator();
-            return caseCalculator.calculate( deelnemer.getDienstVerband(), pensioenRekening, verwachtRendement );
+            return caseCalculator.calculate( deelnemer.getDienstVerband(), pensioenRekening, verwachtRendement, verwachtePensioenLeeftijd );
         };
     }
 

@@ -4,6 +4,7 @@ import com.befrank.casedeveloperjava.domain.model.Deelnemer;
 import com.befrank.casedeveloperjava.domain.model.DienstVerband;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public final class DeelnemerMother {
     private DeelnemerMother() {
@@ -25,6 +26,7 @@ public final class DeelnemerMother {
                 .emailAdres( Deelnemer.EmailAdres.builder()
                         .emailAdres( "janedoe@example.com" )
                         .build() )
+                .geboorteDatum( LocalDate.now().minusYears( 60 ) )
                 .dienstVerband( DienstVerband.builder()
                         .fullTimeSalaris( BigDecimal.valueOf(100_000))
                         .parttimePercentage( new BigDecimal( 80 ) )

@@ -37,7 +37,7 @@ public class Deelnemer {
 
     private LocalDate geboorteDatum;
 
-    @OneToOne
+    @Embedded
     private DienstVerband dienstVerband;
 
     @Embedded

@@ -38,9 +38,8 @@ class CaseServiceTest {
     }
 
     @Test
-    void should_calculate_case() throws CaseService.DeelnemerNotFound
-    {
-        var totalPensioen = caseService.calculate( janeDoe.getId() );
+    void should_calculate_case() throws CaseService.DeelnemerNotFound {
+        var totalPensioen = caseService.calculate( janeDoe.getId(), 61 );
 
         assertThat(totalPensioen).isEqualTo( BigDecimal.valueOf( 3320.91 ).setScale( 2, RoundingMode.HALF_UP ) );
     }

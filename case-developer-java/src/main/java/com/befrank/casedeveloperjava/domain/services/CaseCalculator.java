@@ -10,7 +10,7 @@ import java.math.RoundingMode;
 @Slf4j
 class CaseCalculator {
 
-    public BigDecimal calculate( final DienstVerband dienstVerband, final PensioenRekening pensioenRekening, final BigDecimal verwachtRendement ) {
+    public BigDecimal calculate( final DienstVerband dienstVerband, final PensioenRekening pensioenRekening, final BigDecimal verwachtRendement, final int verwachtePensioenLeeftijd ) {
         var jaarlijksePremieStoring = jaarlijksePremieStorting(dienstVerband);
 
         return verwachteWaarde(pensioenRekening.getHuidigeWaarde(), jaarlijksePremieStoring, verwachtRendement);

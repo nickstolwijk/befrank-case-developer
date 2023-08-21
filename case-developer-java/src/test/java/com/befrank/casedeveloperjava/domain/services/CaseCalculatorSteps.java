@@ -18,6 +18,7 @@ public class CaseCalculatorSteps {
     private final DienstVerband.DienstVerbandBuilder dienstVerbandBuilder = DienstVerband.builder();
     private BigDecimal rendement;
     private BigDecimal huidigeWaarde;
+    private int pensioenLeeftijd;
 
     @Given( "een deelnemer met de naam {word} {word}" )
     public void eenDeelnemerMetDeNaam( final String voornaam, final String achternaam ) {
@@ -61,6 +62,7 @@ public class CaseCalculatorSteps {
 
     @When( "een gewenste pensioenleeftijd van {int} jaar" )
     public void eenGewenstePensioenleeftijdVanJaar( final int pensioenLeeftijd ) {
+        this.pensioenLeeftijd = pensioenLeeftijd;
 
     }
 
@@ -68,7 +70,7 @@ public class CaseCalculatorSteps {
     public void eenVerwachteWaardeOpPensioendatumVanEuro( final BigDecimal verwachteWaarde ) {
         var caseCalculator = new CaseCalculator();
 
-        BigDecimal pensioenWaarde = caseCalculator.calculate( dienstVerbandBuilder.build(), () -> huidigeWaarde, rendement );
+        BigDecimal pensioenWaarde = caseCalculator.calculate( dienstVerbandBuilder.build(), () -> huidigeWaarde, rendement, pensioenLeeftijd );
         assertThat( pensioenWaarde ).isEqualTo(verwachteWaarde );
     }
 }

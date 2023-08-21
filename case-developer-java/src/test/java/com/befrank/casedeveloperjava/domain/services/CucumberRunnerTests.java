@@ -10,7 +10,6 @@ import org.junit.platform.suite.api.Suite;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("com/befrank/casedeveloperjava/domain/services")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com/befrank/casedeveloperjava/domain/services")
-
 public class CucumberRunnerTests  {
 
 }
