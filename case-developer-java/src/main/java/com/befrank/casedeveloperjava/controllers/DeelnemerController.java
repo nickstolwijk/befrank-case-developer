@@ -1,7 +1,7 @@
 package com.befrank.casedeveloperjava.controllers;
 
 import com.befrank.casedeveloperjava.domain.model.Deelnemer;
-import com.befrank.casedeveloperjava.repositories.DeelnemerRepository;
+import com.befrank.casedeveloperjava.repositories.jpa.DeelnemerSpringDataRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,7 @@ import java.util.Optional;
 @RequestMapping("/deelnemer")
 @AllArgsConstructor
 public class DeelnemerController {
-    private final DeelnemerRepository repository;
+    private final DeelnemerSpringDataRepository repository;
 
     @GetMapping
     public Iterable<Deelnemer> findAll() {

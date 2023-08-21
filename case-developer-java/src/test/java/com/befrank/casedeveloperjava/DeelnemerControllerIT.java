@@ -1,6 +1,6 @@
 package com.befrank.casedeveloperjava;
 
-import com.befrank.casedeveloperjava.repositories.DeelnemerRepository;
+import com.befrank.casedeveloperjava.repositories.jpa.DeelnemerSpringDataRepository;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -49,7 +49,7 @@ class DeelnemerControllerIT {
     }
 
     @Autowired
-    private DeelnemerRepository deelnemerRepository;
+    private DeelnemerSpringDataRepository deelnemerRepository;
     @Test
     void call_to_controller_returns_deelnemer() {
         var janeDoe = deelnemerRepository.save( DeelnemerMother.janeDoe() );

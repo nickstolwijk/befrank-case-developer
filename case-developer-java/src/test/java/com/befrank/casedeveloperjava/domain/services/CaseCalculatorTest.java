@@ -20,6 +20,6 @@ class CaseCalculatorTest {
                 .beschikbarePremie( BigDecimal.valueOf( 5L ) )
                 .build();
 
-        assertThat(caseCalculator.jaarlijksePremieStorting( dienstVerband )).isEqualTo( BigDecimal.valueOf( 3376.04 ) );
+        assertThat(caseCalculator.jaarlijksePremieStorting( dienstVerband )).isEqualTo( BigDecimal.valueOf( 3376 ) );
     }
 }

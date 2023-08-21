@@ -6,6 +6,7 @@ import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,6 +37,12 @@ public class Deelnemer {
 
     private LocalDate geboorteDatum;
 
+    @OneToOne
+    private DienstVerband dienstVerband;
+
+    @Embedded
+    private PensioenRekeningNummer pensioenRekeningNummer;
+
     @Embeddable
     @Builder
     public record Naam(String voornaam, String tussenvoegsel, String achternaam) {
@@ -48,5 +55,10 @@ public class Deelnemer {
     @Embeddable
     @Builder
     public record EmailAdres(String emailAdres) {
+    }
+
+    @Embeddable
+    @Builder
+    public record PensioenRekeningNummer(String pensioenRekeningNummer) {
     }
 }

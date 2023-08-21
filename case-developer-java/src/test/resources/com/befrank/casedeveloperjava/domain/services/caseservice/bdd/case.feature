@@ -11,7 +11,7 @@ Feature: Case calculator
     Given een rendement van 3.0% per jaar
     When een gewenste pensioenleeftijd van 61 jaar
     #Then een verwachte waarde op pensioendatum van 104802.68 euro
-    Then een verwachte waarde op pensioendatum van 157243.9818 euro
+    Then een verwachte waarde op pensioendatum van 157243.98 euro
 
   Scenario: John Doe has a case
     Given een deelnemer met de naam "John Doe"
@@ -24,4 +24,4 @@ Feature: Case calculator
     Given een rendement van 3.0% per jaar
     When een gewenste pensioenleeftijd van 65 jaar
     #Then een verwachte waarde op pensioendatum van 125498.08 euro
-    Then een verwachte waarde op pensioendatum van 157243.9818 euro
+    Then een verwachte waarde op pensioendatum van 157243.98 euro

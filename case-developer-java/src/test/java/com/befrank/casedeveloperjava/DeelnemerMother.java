@@ -1,6 +1,9 @@
 package com.befrank.casedeveloperjava;
 
 import com.befrank.casedeveloperjava.domain.model.Deelnemer;
+import com.befrank.casedeveloperjava.domain.model.DienstVerband;
+
+import java.math.BigDecimal;
 
 public final class DeelnemerMother {
     private DeelnemerMother() {
@@ -21,6 +24,15 @@ public final class DeelnemerMother {
                         .build())
                 .emailAdres( Deelnemer.EmailAdres.builder()
                         .emailAdres( "janedoe@example.com" )
+                        .build() )
+                .dienstVerband( DienstVerband.builder()
+                        .fullTimeSalaris( BigDecimal.valueOf(100_000))
+                        .parttimePercentage( new BigDecimal( 80 ) )
+                        .franchise( BigDecimal.valueOf( 15_599 ) )
+                        .beschikbarePremie( BigDecimal.valueOf( 3 ) )
+                        .build() )
+                .pensioenRekeningNummer( Deelnemer.PensioenRekeningNummer.builder()
+                        .pensioenRekeningNummer( "123.456" )
                         .build() )
                 .build();
     }
